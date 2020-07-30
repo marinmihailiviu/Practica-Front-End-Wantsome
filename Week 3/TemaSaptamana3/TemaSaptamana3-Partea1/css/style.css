@@ -1,0 +1,87 @@
+
+/* 1. Rezolvati urmatoarele cerinte intr-un fisier CSS separat, pentru HTML-ul atasat temei: */
+/* 1.a.Fiecare element al listei trebuie sa aiba textul verde */
+
+li {
+    color: green;
+}
+
+/* 1.b. Al 3-lea element al listei trebuie sa aiba background-ul albastru deschis */
+li:nth-child(3) {
+    background-color: lightblue;
+}
+
+/* 1. c. Primul element al listei trebuie sa aiba bordura sus de tip solid de 1px si sa fie verde */
+
+li:first-child {
+    border-top: solid 1px green;
+}
+
+
+/* 1.d. Ultimul element al listei trebuie sa aiba bordura jos de tip punctata de 5px si sa fie albastra*/
+
+li:last-child {
+    border-bottom: dashed 5px blue;
+}
+
+/* 1.e. Link-urile pentru elementele de pe pozitiile 3 si 5 trebuie sa fie rosii*/
+
+li:nth-child(3) a{
+    color:red;
+}
+
+li:nth-child(5) a{
+    color:red;
+}
+
+
+/* 1.f. Link-ul pentru elementul de pe pozitia 5 trebuie sa se faca gri atunci cand ducem mouse-ul deasupra lui */
+
+li:nth-child(5) a:hover{
+    color:grey;
+}
+
+/* 1.g. Elementele de pe pozitiile 2 si 5 trebuie sa ramana fara “bullet point */
+
+li:nth-child(2) {
+    list-style:none;
+}
+li:nth-child(5) {
+    list-style:none;
+}
+
+
+/* 1.h. Input-urile de tip text trebuie sa aiba fundal gri atunci cand sunt focusate */
+input[type=text]:focus {
+    background: grey; 
+}
+
+/* 1.i. Input-ul corespunzator “First Name” trebuie sa aiba textul de culoarea verde atunci cand scriem in el */
+
+div:nth-child(1) input:focus {
+    color: green;
+}
+
+/* 1.j. Input-ul corespunzator “Last Name” trebuie sa aiba textul de culoarea albastra atunci cand scriem in el */
+
+div:nth-child(2) input:focus {
+    color: blue;
+}
+
+/* 1.k. Input-ul pentru parola trebuie sa aiba textul invizibil atunci cand scriem in el */
+input[type=password]:focus {
+    color: transparent;
+}
+
+/* 1.l. Atunci cand selectam textul unui e-mail scris deja in input-ul pentru e-mail, selectia trebuie sa aiba fundalul galben iar culoarea textului sa fie roz */
+
+input[type=email]::selection {
+    background-color: yellow;
+    color: pink;
+}
+
+/* 1.m. Butonul de trimitere a formularului trebuie sa aiba textul rosu atunci cand trecem cu mouse-ul peste el  */
+
+input:hover[type=submit] {
+    color: red; 
+}
