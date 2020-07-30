@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Tema 17-18 Iulie 2020 - Ziua 2</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style1.css">
+</head>
+
+<body>
+    <h3>Subiectul 1 - Creati structura HTML pentru urmatorul formular:</h3>
+
+    <form>
+        <h2>Travel reservation form</h2>
+        <p><strong>*denotes mandatory</strong></p>
+        <p>First Name*:</p>
+        <input type="text" name="FullName" value="FirstName LastName" required>
+        <p>Email adress*:</p>
+        <input type="email" name="email" value="EMAIL_ADRESS" required>
+        <p>Select Tour Package*:</p>
+        <select name="tour_package" required>
+            <option value="blank"></option>
+            <option value="Package">Goa</option>
+            <option value="Package">Goa1</option>
+            <option value="Package">Goa2</option>
+        </select>
+        <p>Arrival date*:</p>
+        <input type="date"><br>
+        <p>Number of persons*:</p>
+        <input type="number" name="NumPersons" value="UNKNOWN_TYPE" required><br>
+        <p>What would you want to avail?*</p>
+        <input type="checkbox" name="optiune1" value="Boarding"> Boarding<br>
+        <input type="checkbox" name="optiune2" value="Fooding"> Fooding<br>
+        <input type="checkbox" name="optiune3" value="Sight seeing"> Sight seeing<br>
+        <p>Discount Coupon code:</p>
+        <input type="text" name="Discount" value="UNKNOWN_TYPE">
+        <p>Terms and condition*</p>
+        <input type="radio" name="terms" value="Agree" checked>I agree
+        <input type="radio" name="terms" value="Disagree">I disagree
+        <br>
+        <input type="submit" value="Complete reservation">
+
+    </form>
+
+</body>
+
+</html>
