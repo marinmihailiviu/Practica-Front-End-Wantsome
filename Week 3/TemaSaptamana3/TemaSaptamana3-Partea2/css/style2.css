@@ -1,0 +1,45 @@
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: black;
+    background-color: white;
+}
+
+
+li {
+    color: red;
+    font-size: 20px;
+    list-style:none;
+}
+
+p {
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h3 {
+    font-size: 32px;
+}
+
+input[type=text]:focus {
+    background: white; 
+}
+
+input[type=email]:focus {
+    background: red; 
+}
+
+input:focus[type=submit] {
+    color: blue; 
+}
+
+input[type=submit] {
+    font-size: 20px;
+    color: red;
+    font-size: larger; 
+}
+
+input:hover[type=submit] {
+    font-size: 25px;
+    color: blue;
+    font-size: larger; 
+}
