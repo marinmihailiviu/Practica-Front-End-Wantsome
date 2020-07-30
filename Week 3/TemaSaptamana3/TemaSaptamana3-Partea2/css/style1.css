@@ -1,0 +1,30 @@
+* {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    background-color: lightgray;
+}
+
+
+p {
+    color: blue;
+    font-size: 20px;
+}
+
+input[type=text]:focus {
+    background: white; 
+}
+
+input[type=email]:focus {
+    background: red; 
+}
+
+input:focus[type=submit] {
+    color: blue; 
+}
+
+input:hover[type=submit] {
+    color: red;
+    font-size: larger; 
+    
+}
+
