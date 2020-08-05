@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Positioning</title>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            margin: 0;
+        }
+
+        header {
+            display: flex;
+            background-color: lightcoral;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        ul {
+            display: inline-flex;
+            list-style-type: none;
+        }
+
+        ul li {
+            padding: 10px;
+        }
+
+        .box {
+            width: 300px;
+            height: 130px;
+            background-color: lightgreen;
+        }
+
+        .absolute-div {
+            width: 300px;
+            height: 150px;
+            background-color: lightseagreen;
+            position: absolute;
+            top: 0 px;
+            left: 320 px;
+        }
+
+        .main-content {
+            position: relative;
+            top: 80px;
+            z-index: -1;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Hello world!</h1>
+        <ul>
+            <li>Home</li>
+            <li>Products</li>
+            <li>About</li>
+        </ul>
+    </header>
+    <div class="main-content">
+        <div class="box">
+            <p>Sambata</p>
+        </div>
+        <div class="box">
+            <p>Duminica</p>
+        </div>
+        <div class="box">
+            <p>Luni</p>
+        </div>
+        <div class="box">
+            <p>Marti</p>
+        </div>
+        <div class="box">
+            <p>Miercuri</p>
+        </div>
+        <div class="box">
+            <p>Joi</p>
+        </div>
+        <div class="box">
+            <p>Vineri</p>
+        </div>
+        <div class="box">
+            <p>Sambata</p>
+        </div>
+        <div class="box">
+            <p>Duminica</p>
+        </div>
+        <div class="absolute-div">
+            <p>Duminica suprema</p>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

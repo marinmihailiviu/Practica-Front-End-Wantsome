@@ -48,32 +48,34 @@
 
     <form>
         <h2>My feedback form</h2>
-        <li>Name:<input type="text" name="Name"></li>
-        <li>Email:<input type="email" name="Email"></li>
-        <li>Password:<input type="password" name="Password"></li>
-        <br>
-        <p>Please check all the emotions that apply to you:</p>
-        <li>Angry<input type="checkbox" name="Angry" value="Angry"><br></li>
-        <li>Sad<input type="checkbox" name="Sad" value="Sad"> <br></li>
-        <li>Happy<input type="checkbox" name="Happy" value="Happy"> <br></li>
-        <li>Ambivalent<input type="checkbox" name="Ambivalent" value="Ambivalent"> <br></li>
+        <ul>
+            <li>Name:<input type="text" name="Name"></li>
+            <li>Email:<input type="email" name="Email"></li>
+            <li>Password:<input type="password" name="Password"></li>
+            <br>
+            <p>Please check all the emotions that apply to you:</p>
+            <li>Angry<input type="checkbox" name="Angry" value="Angry"><br></li>
+            <li>Sad<input type="checkbox" name="Sad" value="Sad"> <br></li>
+            <li>Happy<input type="checkbox" name="Happy" value="Happy"> <br></li>
+            <li>Ambivalent<input type="checkbox" name="Ambivalent" value="Ambivalent"> <br></li>
 
-        <p>Please check all the emotions that apply to you:</p>
-        <li>Very satisfied<input type="radio" name="radio" value="Very satisfied" checked></li>
-        <li>Satisfied<input type="radio" name="radio" value="Satisfied"></li>
-        <li>Didn't care<input type="radio" name="radio" value="Didnt care"></li>
-        <li>Dissatisfied<input type="radio" name="radio" value="Dissatisfied"></li>
-        <li>Very dissatisfied<input type="radio" name="radio" value="Very dissatisfied"></li>
-        <li>Further comments: <textarea name="mesaj" rows="5" cols="25"></textarea></li>
-        <li>Bio photo:<input type="file" name="photo"></li>
-        <li>Location visited:
-            <select name="LocationVisited" required>
-                <option value="blank"></option>
-                <option value="Location">Location 1</option>
-                <option value="Location">Location 2</option>
-                <option value="Location">Location 3</option>
-            </select>
-        </li>
+            <p>Please check all the emotions that apply to you:</p>
+            <li>Very satisfied<input type="radio" name="radio" value="Very satisfied" checked></li>
+            <li>Satisfied<input type="radio" name="radio" value="Satisfied"></li>
+            <li>Didn't care<input type="radio" name="radio" value="Didnt care"></li>
+            <li>Dissatisfied<input type="radio" name="radio" value="Dissatisfied"></li>
+            <li>Very dissatisfied<input type="radio" name="radio" value="Very dissatisfied"></li>
+            <li>Further comments: <textarea name="mesaj" rows="5" cols="25"></textarea></li>
+            <li>Bio photo:<input type="file" name="photo"></li>
+            <li>Location visited:
+                <select name="LocationVisited" required>
+                    <option value="blank"></option>
+                    <option value="Location">Location 1</option>
+                    <option value="Location">Location 2</option>
+                    <option value="Location">Location 3</option>
+                </select>
+            </li>
+        </ul>
 
         <input type="submit" value="submit">
 

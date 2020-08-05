@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Wantsome</title>
+    <meta charset="UTF-8">
+    <style>
+        p[title] {
+            color: red;
+        }
+
+        p[title="Vizibil la hover"] {
+            color: green;
+        }
+
+
+        p[title~="Second"] {
+            color: pink;
+        }
+
+        p[title|="This"] {
+            color: blue;
+        }
+
+        a[href^="http://"] {
+            font-size: 18 px;
+            font-weight: bold;
+        }
+
+        a[href$=".com"] {
+            color: indianred;
+            font-weight: normal;
+        }
+
+        p[title*="CSS"] {
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+
+<body>
+    <p title="Vizibil la hover">Azi este vineri.</p>
+    <p title="Second title">Maine este sambata.</p>
+    <p title="This-is-my-title">Another test.</p>
+    <p title="We learn CSS">Wantsome</p>
+    <a href="http://elefant.ro">Subscribe!</a> <br>
+    <a href="http://yahoo.com">Go to Yahoo!</a><br>
+    
+</body>
+
+</html>
