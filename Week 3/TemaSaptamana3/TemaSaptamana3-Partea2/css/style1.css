@@ -23,7 +23,7 @@ input:focus[type=submit] {
 }
 
 input:hover[type=submit] {
-    color: red;
+    color: rgb(126, 126, 126);
     font-size: larger; 
     
 }
