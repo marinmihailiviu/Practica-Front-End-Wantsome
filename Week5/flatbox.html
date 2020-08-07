@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Flexbox</title>
+    <meta charset="UTF-8">
+    <style>
+        * {
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: blueviolet;
+            width: 100%;
+            padding: 40px;
+
+        }
+
+        .box {
+            padding: 60px;
+            height: 80vh;
+        }
+
+        .right {
+            background-color: chartreuse;
+
+        }
+
+        .left {
+            background-color: cornflowerblue;
+        }
+
+        .center {
+            background-color: darkgrey;
+            flex-grow: 1;
+        }
+
+        .container {
+            display: flex;
+            
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: goldenrod;
+            padding: 30px;
+        }
+    </style>
+
+<body>
+    <header>
+        <h2>This is my header</h2>
+    </header>
+
+    <div class="container">
+        <div class="box left">Left side (fixed)</div>
+        <div class="box center">Center content (flexible)</div>
+        <div class="box right">Right side (fixed)</div>
+    </div>
+
+    <footer>
+        <p>Thank you for visiting</p>
+    </footer>
+</body>
+
+</head>
+
+
+</html>
