@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Javascript</title>
+    <meta charset="UTF-8">
+
+    <script>
+
+        function numeFunctie() {
+            console.log('You called me');
+        }
+
+        numeFunctie();
+
+        function sumaNumerelor(a, b) {
+            return a + b;
+        }
+
+        console.log(sumaNumerelor(4, 5));
+        console.log(sumaNumerelor(42, 5));
+
+        //NAMED FUNCTION
+
+        function showMessage(text) {
+            console.log(text);
+        }
+
+        showMessage('Gigel are mere');
+
+        function exempluFunctie(mesaj) {
+            console.log(mesaj);
+        }
+
+        exempluFunctie('prima incercare');
+        exempluFunctie('a doua incercare');
+        exempluFunctie('a treia incercare');
+
+
+        // FUNCTION EXPRESSIONS - prin care putem sa scriem o functie sub forma unei expresii
+
+        var myFunction = function (a, b) {
+            return a * b;
+        }
+
+        console.log(myFunction(2, 5));
+
+
+        // ANONYMOUS FUNCTION
+
+        var anonymous = function () {
+            console.log('Hi i don`t have a name!')
+        }
+
+        anonymous();
+
+        // IMMEDIATELY INVOKED FUNCTION EXPRESSION
+
+        (function () {
+            var message = 'I can call myself, don`t need any help.';
+            console.log(message);
+        })();
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+</head>
+
+<body>
+    <h1>JAVASCRIPT</h1>
+</body>
+
+</html>

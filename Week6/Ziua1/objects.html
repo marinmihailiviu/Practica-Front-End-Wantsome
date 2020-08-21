@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Javascript</title>
+    <meta charset="UTF-8">
+
+    <script>
+
+        var x = [];
+        var object = {};
+        var user = {
+            nume: 'Marius',
+            varsta: '24',
+            nationalitate: 'roman',
+            hobbies: ['innot', 'fotbal', 'muzica'],
+        };
+
+        console.log(user);
+
+        //adaugare proprietati
+
+        user.gender = 'male';
+        user['job'] = 'Developer';
+        console.log(user);
+
+        //stergere varsta
+
+        delete user.varsta;
+        delete user.hobbies;
+        console.log(user);
+
+        //Accesare proprietati
+
+        var laptop = {
+            culoare: 'Alb',
+            specificatii: {
+                procesor: 'Intel i9',
+                SSD: true,
+                capacitate: "2TB",
+            },
+            greutate: '2kg',
+            display: 'FullHD',
+            installSoftware: true,
+            keyboard: ['en', 'ro', 'es'],
+        }
+
+        console.log(laptop);
+        console.log(laptop.culoare);
+        console.log(laptop.specificatii.procesor);
+        console.log(laptop.display);
+        console.log(laptop.keyboard[2]);
+
+
+        //Functii
+
+        var animal = {
+            type: 'Dog',
+            gender: 'female',
+            saySomething: function () { console.log('Whoof!!!') },
+        }
+
+        animal.saySomething();
+
+
+        //THIS 
+
+        var user = {
+            name: 'Cristina',
+            age: 22,
+            saySomethingAboutUser: function () {
+                console.log(user.name + ' are ' + this.age);
+            }
+        }
+        user.saySomethingAboutUser();
+
+        //KEY and VALUES
+
+        var laptop2 = {
+            culoare: 'Alb',
+            specificatii: {
+                procesor: 'Intel i9',
+                SSD: true,
+                capacitate: "2TB",
+            },
+            greutate: '2kg',
+            display: 'FullHD',
+            installSoftware: true,
+            keyboard: ['en', 'ro', 'es'],
+        }
+
+        var objKeys = Object.keys(laptop2);
+        console.log(objKeys);
+
+        var objValues = Object.values(laptop2);
+        console.log(objValues);
+
+
+        //Object constructors
+
+        function Car(make, model, year) {
+            this.make = make;
+            this.model = model;
+            this.year = year;
+        }
+        
+        var myCar = new Car ('Audi', 'Q6', 2020);
+        console.log(myCar);
+
+
+    </script>
+
+
+</head>
+
+<body>
+    <h1>JAVASCRIPT</h1>
+</body>
+
+</html>

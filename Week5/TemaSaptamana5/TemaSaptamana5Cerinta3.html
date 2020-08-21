@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cerinta 3 - Tema Saptamana 5</title>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            background-image: linear-gradient(to right, #00c3ff, #ffff1c);
+        }
+
+        .grid-container {
+            display: grid;
+            grid-gap: 20px;
+            text-align: left;
+            color: white;
+            position: absolute;
+            width: 800px;
+        }
+
+        div {
+            position: relative;
+        }
+
+        .appetizers {
+            grid-column: 1 / 5;
+            grid-row: 1 / 4;
+
+        }
+
+        .breads {
+            grid-column: 1 / 5;
+            grid-row: 4 / 8;
+
+        }
+
+        .drinks {
+            grid-column: 5 / 10;
+            grid-row: 1 / 4;
+
+        }
+
+        .fast {
+            grid-column: 5 / 10;
+            grid-row: 4 / 8;
+
+        }
+
+        h2 {
+            position: absolute;
+            bottom: 0px;
+        }
+
+        h2 span {
+            display: inline-block;
+            width: 480px;
+            color: white;
+            padding: 10px;
+            background: black;
+            opacity: 0.7;
+        }
+
+        header {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 48px;
+            color: black;
+            padding-bottom: 15px;
+        }
+
+        @media screen and (max-width: 600px) {
+            body {
+                display: grid;
+                grid-auto-flow: column;                                
+            }
+
+        }
+    </style>
+
+<body>
+    <header>MENU</header>
+
+    <div class="grid-container">
+        <div class="appetizers">
+            <img src="https://images.unsplash.com/photo-1487769723072-0e6602799af7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+                alt="" width="500px" height="300px" />
+            <h2><span>APPETIZERS & BITES</span></h2>
+
+        </div>
+
+        <div class="breads">
+            <img src="https://images.unsplash.com/photo-1523294587484-bae6cc870010?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=864&q=80"
+                alt="" width="500px" height="300px" />
+            <h2><span>BREADS</span></h2>
+
+        </div>
+
+        <div class="drinks">
+            <img src="https://images.unsplash.com/photo-1496318447583-f524534e9ce1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=805&q=80"
+                alt="" width="500px" height="300px" />
+            <h2><span>DRINKS</span></h2>
+
+        </div>
+
+        <div class="fast">
+            <img src="https://images.unsplash.com/photo-1561758033-d89a9ad46330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+                alt="" width="500px" height="300px" />
+            <h2><span>FAST</span></h2>
+        </div>
+    </div>
+
+
+</body>
+</head>
+
+</html>

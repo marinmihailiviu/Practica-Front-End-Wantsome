@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Javascript</title>
+    <meta charset="UTF-8">
+
+    <script>
+        //Exercitiul 1:
+        // IF -> folositi pentru a executa un cod, daca conditia este TRUE
+
+        var number = 7;
+
+        if (number > 2) {
+            console.log('Conditia este indeplinita');
+        }
+
+        //Exercitiul 2:
+        // ELSE -> folositi cand aceeasi conditie, este FALSE;
+
+        var nr = 2;
+
+        if (nr > 5) {
+            console.log('Conditie indeplinita');
+
+        } else {
+            console.log('Conditie initiala neindeplinita');
+        }
+
+        //Exercitiul 3:
+
+        var name = 'Marius';
+        var user = 'Marius';
+
+        if (user === name) {
+            console.log('Acces permis pentru ' + user + ', bine ai venit!')
+        } else {
+            console.log('Acces interzis')
+        }
+
+        //Exercitiul 4:
+
+        var fructe = ['mere', 'pere']
+
+        if (fructe[0] === 'mere') {
+            console.log('Avem mere!');
+        } else {
+            console.log('Trebuie sa cumparam mere!');
+        }
+
+        // Else IF - folositi atunci cand IF este FALSE, pentru a defini o noua conditie
+
+        var number = 3;
+
+        if (number > 10) {
+            console.log(number + ' este mai mare decat 10!');
+        } else if (number > 1) {
+            console.log(number + ' este mai mare decat 1!')
+        } else {
+            console.log('NU ne intereseaza ce numar este!')
+        }
+
+        //SWITCH - folositi pentru a specifica mai multe blocuri de cod alternative, in functie de conditia care se indeplineste
+
+        //Ex 1:
+        var car = 'Dacia';
+
+        switch (car) {
+            case 'Mazda': {
+                console.log('Felicitari, ai castigat o Mazda!');
+            }
+                break;
+
+            case 'Audi': {
+                console.log('Felicitari, ai castigat un Audi!')
+            }
+                break;
+
+            default: {
+                console.log('Nu ai castigat nimic, mai incearca!');
+            }
+        }
+
+        //Ex 2:
+        var numar = 8;
+
+        switch (numar) {
+            case numar = 3: {
+                console.log('Numarul este egal cu, ' + numar);
+            }
+                break;
+
+            case numar = 10: {
+                console.log('Numarul' + numar + ' este egat cu 10!');
+            }
+                break;
+
+            default: {
+                console.log('Numarul este diferit de toate conditiile!');
+            }
+        }
+
+
+        //Exercitiul 3 - complex:
+
+        var user1 = {
+            name: {
+                first: 'John',
+                last: 'Doe',
+            },
+            gender: 'male',
+            title: 'NORMAL',
+            sections: ['Account', 'Generic'],
+        }
+
+        var user2 = {
+            name: {
+                first: 'Mike',
+                last: 'Doe',
+            },
+            gender: 'male',
+            title: 'ADMIN',
+            sections: ['Dashboard', 'User Profiles', 'Account', 'Generic'],
+        }
+
+        var user3 = {
+            name: {
+                first: 'Mike',
+                last: 'Doe',
+            },
+            gender: 'male',
+            title: 'SOMETHING ELSE',
+            sections: ['Dashboard', 'User Profiles', 'Account', 'Generic'],
+        }
+
+        function checkUserPermissions(user) {
+            var firstName = user.name.first;
+            var lastName = user.name.last;
+            var title = user.title;
+            var permissions = user.sections.join(", ");
+
+            switch (title) {
+                case 'NORMAL': {
+                    console.log(firstName + ", " + lastName + ", " + title + " si are permisiunile de" + permissions);
+                }
+                    break;
+
+                case 'ADMIN': {
+                    console.log(firstName + ", " + lastName + ", " + title + " si are permisiunile de" + permissions);
+                }
+                    break;
+
+                default: {
+                    console.log("Unknown User. Tell us who you are!");
+                }
+            }
+        }
+
+        checkUserPermissions(user1);
+        checkUserPermissions(user2);
+        checkUserPermissions(user3);
+
+
+
+        //EXercitiul 2 din tema:
+
+        var helloWorldInLang = function (lang) {
+            switch (lang) {
+                case 'en': {
+                    console.log('Hello World!');
+                }
+                    break;
+                case 'es': {
+                    console.log('Holla Mundo!');
+                }
+                    break;
+                case 'de': {
+                    console.log('Hallo Welt!');
+                }
+                    break;
+
+                default: console.log('Hello World!')
+
+            }
+        }
+
+        helloWorldInLang('en');
+        helloWorldInLang('es');
+        helloWorldInLang('de');
+        helloWorldInLang('ro');
+
+    </script>
+
+
+</head>
+
+<body>
+    <h1>JAVASCRIPT</h1>
+</body>
+
+</html>

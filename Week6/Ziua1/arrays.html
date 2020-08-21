@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript</title>
+        <meta charset="UTF-8">
+
+        <script>
+            // length + position
+            var fructe = ['celementina', 'kiwi', 'ananas', 'mango'];
+            console.log(fructe.length);
+            console.log(fructe[0]);
+            console.log(fructe[2]);
+
+            //concat
+            var masini = ['Mustang', 'Aro', 'BMW'];
+            var masiniSport = ['Tigra', 'Porsche'];
+
+            var allCars = masini.concat(masiniSport);
+            console.log(allCars);
+
+            //isArray
+            console.log(Array.isArray(masini));
+            var animal = 'Pisica';
+            console.log(Array.isArray(animal));
+
+            //join 
+            var stringDeFructe = fructe.join(' si ');
+            console.log(stringDeFructe);
+
+            //push - adauga un element in coada array-ului
+            var nume = ['Ionut', 'Radu', 'Andreea'];
+            console.log(nume);
+            nume.push('Raluca');
+            console.log(nume);
+
+            //pop - elimina ultimul element
+            nume.pop();
+            console.log(nume);
+
+            //shift - elimina prima pozitie
+            nume.shift();
+            console.log(nume);
+
+            //unshift - adauga la prima pozitie
+            nume.unshift('Emilian')
+            console.log(nume);
+
+            //reverse - inverseaza pozitia elementelor 
+            nume.reverse();
+            console.log(nume);
+
+            //sort - aranjeaza alfabetic
+            nume.sort();
+            console.log(nume);
+
+            var numbers = [1, 5, -7, 3, 22, 27];
+            numbers.sort();
+            console.log(numbers);
+
+            numbers.sort(function(a,b){
+                return a-b; //ordine crescatoare si daca vrem descrescatoare b-a
+            })
+
+            console.log(numbers);
+
+            //splice - introduce X elemente in locul celor mentionate
+
+            var orase = ['Iasi', 'Bucuresti', 'Timisoara', 'Cluj', 'Brasov', 'Arad', 'Sibiu'];
+            console.log(orase);
+            orase.splice(1, 2, 'Constanta', 'Giurgiu');
+            console.log(orase);
+
+
+
+        </script>
+
+
+    </head>
+
+    <body>
+        <h1>JAVASCRIPT</h1>
+    </body>
+</html>
