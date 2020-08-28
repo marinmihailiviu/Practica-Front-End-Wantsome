@@ -20,30 +20,29 @@
 
         div {
             position: relative;
+            float: left;
+            width: 25%;
+            padding: 20px;
         }
 
         .appetizers {
             grid-column: 1 / 5;
             grid-row: 1 / 4;
-
         }
 
         .breads {
             grid-column: 1 / 5;
             grid-row: 4 / 8;
-
         }
 
         .drinks {
             grid-column: 5 / 10;
             grid-row: 1 / 4;
-
         }
 
         .fast {
             grid-column: 5 / 10;
             grid-row: 4 / 8;
-
         }
 
         h2 {
@@ -67,13 +66,7 @@
             padding-bottom: 15px;
         }
 
-        @media screen and (max-width: 600px) {
-            body {
-                display: grid;
-                grid-auto-flow: column;                                
-            }
 
-        }
     </style>
 
 <body>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Exercitii</title>
+    <meta charset="UTF-8">
+
+    <script>
+
+        // Ex1
+        // Creati un obiect "car"
+        // Adaugati proprietatea name si valoarea Tesla
+        // Adaugat proprietatea wheels si valoarea 4
+        // Schimbati valoarea name sa fie Mercedes
+        // Stergeti proprietatea name
+
+        var car = {
+            name: 'Tesla',
+            wheels: 4,
+        }
+
+        console.log(car);
+        car.name = 'Mercedes';
+        console.log(car);
+
+        delete car.name;
+        console.log(car);
+
+        //Ex2
+        // Creati un obiect cu 4 proprietati
+        // Stocati "key"-urile intr-o variabila noua
+        // intr-o alta variabila vreau sa am toate key-urile cu litere mari
+        // Stocati valorile intr-o variabila noua
+        // intr-o alta variabila vreau sa am toate valorile cu litere mici
+        // vreau la final sa ma rezultatul un singur string care sa contina o fraza de genul "proprietatea1 proprietatea2 proprietatea3 proprietatea4 reprezinta ceva"
+
+
+        var song = {
+            title: 'Hit em up',
+            artist: '2pac',
+            year: 1995,
+            label: 'Death Row',
+        }
+
+        var myKeys = Object.keys(song);
+        console.log(myKeys); //le scoate in array
+
+        var myBigKeys = Object.keys(song).join().toUpperCase(); //myKeys.join().toUpperCase();
+        console.log(myBigKeys);
+
+        var myValues = Object.values(song);
+        console.log(myValues);
+
+        var myLowerValues = Object.values(song).join().toLowerCase(); //myValues.join().toLowerCase();
+        console.log(myLowerValues);
+
+        var fraza = 'Piesa ' + song.title + ' a fost lansata in anul ' + song.year;
+        console.log(fraza);
+
+        //Ex3
+        // Creati un obiect  cu 3 proprietati si una dintre ele sa reprezinte o  metoda
+        // Metoda din obiect vreau sa returneze sau sa printeze (console.log()) prima valoare impreuna cu a doua valoare.
+
+        var sportCar = {
+            carBrand: 'Audi',
+            model: 'A7',
+            horsepower: 320,
+            describeCar: function () {
+                console.log('This is an ' + sportCar.carBrand + ' and has ' + sportCar.horsepower + ' horsepower.');
+            }
+        }
+        sportCar.describeCar();
+
+        //Ex4 
+        // Creati un obiect cu cateva proprietati
+        // "Copiati" obiectul printr-o metoda specifica obiectelor(vedeti pe google) si stocatil intr-o alta variabila
+        // Pe obiectul nou adaugam 2 noi proprietati
+        // Avem obiectul de mai jos, folosind o metoda pe obiecte faceti "merge" intre cele 2 obiecte si salvati-l sub un nume nou.
+
+        var houseProprieties1 = {
+            surface: '150 mp',
+            type: 'Open Space House',
+            yearOfConstruction: 2020,
+        }
+
+        console.log(houseProprieties1);
+
+        var houseProprieties2 = Object.assign(houseProprieties1);
+
+        console.log(houseProprieties2);
+
+        houseProprieties2.design = 'Modern';
+        houseProprieties2['garden'] = 'Yes';
+        console.log(houseProprieties2);
+
+        myHouse = {
+            rooms: 3,
+            zone: "Bucium",
+            animals: 1
+        }
+
+        var houseProprieties3 = Object.assign(houseProprieties2, myHouse);
+        console.log(houseProprieties3);
+
+        // Ex5 
+        // Creati un obiect care sa contina un alt obiect in interorul lui cu 2 proprietati
+        // Accesati proprietatile acelui obiect si stocati key-le intr-o variabila separata.
+        // transformati arrayul intr-un singur string care sa rezulte "proprietatea1 si proprietatea2 apartin obiectului x"
+
+        var desktopPC = {
+            monitor: {
+                model: 'LG 34WN80C-B',
+                resolution: '3440 x 1440',
+                responseTime: '5ms',
+            },
+            pc: {
+                brand: 'HP',
+                memory: '16gb',
+                processorSpeed: '4.2 GHz',
+            },
+        }
+
+        console.log(desktopPC);
+
+        var myDesktopPC = desktopPC.monitor.model + ' ' + desktopPC.monitor.resolution + ' apartin obiectului DesktopPC.';
+        console.log(myDesktopPC);
+
+
+        //Ex6
+        // Avem obiectul : 
+        myObject = {
+            name: "John",
+            surname: "Applegate",
+        }
+
+        var sortName = Object.values(myObject).sort();
+        console.log(sortName);
+
+
+        //Adaugati o metoda care sa sorteze cele 2 valori ale numelui. -->
+
+
+        //Ex7 
+        //Faceti o functie constructor
+        // Cu functia constructor creati 3 obiecte cu valori diferite
+        // Pentru toate valorile din acele obiecte transformatile in litere mari. -->
+
+        function house (type, style, surface) {
+            this.type = type;
+            this.style = style;
+            this.surface = surface;
+        }
+
+        var myHouse = new house('appartement', 'classic', '95 mp');
+        console.log(Object.values(myHouse).join().toUpperCase());
+
+
+    </script>
+
+</head>
+
+<body>
+    <h1>HomeworkW6 - Partea 1</h1>
+</body>
+
+</html>
