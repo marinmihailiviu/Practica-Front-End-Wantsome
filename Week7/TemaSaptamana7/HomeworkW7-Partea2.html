@@ -2,104 +2,215 @@
 <html>
 
 <head>
-    <title>HomeworkW7 - Partea 1</title>
-    <meta charset="UTF-8">
+        <title>HomeworkW7 - Partea 2</title>
+        <meta charset="UTF-8">
 
-    <script>
+        <script>
 
-        //  1. Scrieti o functie care sa protejeze emailul unui user
-        // de ex: myFunction("ovidiu.grigoras@test.com") sa printeze "ovidiu...@test.com" sau "ovid...@test.com" 
+                //  1. Scrieti o functie care sa protejeze emailul unui user
+                // de ex: myFunction("ovidiu.grigoras@test.com") sa printeze "ovidiu...@test.com" sau "ovid...@test.com" 
 
-// --------------------------------------------------------------------------------------------------------------------------------------  
+                myFunction = function (userEmail) {
+                        var split = userEmail.split("@");
+                        var split1 = split[0];
+                        var avg = split1.length / 2;
 
-        //  2. Scrieti o functie care sa faca uppercase la fiecare litera de la fiecare inceput de string
-        // de ex: myFunction("i am superman") sa printeze "I Am Superman" 
+                        split1 = split1.substring(0, (split1.length - avg));
+                        split2 = split[1];
+                        return split1 + "...@" + split2;
+                };
 
-// --------------------------------------------------------------------------------------------------------------------------------------  
+                console.log(myFunction("ovidiu.grigoras@test.com"));
 
-        //  3. Scrieti o functie care sa schimbe literele unui string daca sunt uppercase cu lowercase si invers
-        // ex: myFunction("xxXyYzZZ") sa printeze "XXxYyZzz" 
 
-// --------------------------------------------------------------------------------------------------------------------------------------  
+                // --------------------------------------------------------------------------------------------------------------------------------------  
 
-        //  4. Scrieti o functie care sa concateneze un string de cate ori ii zicem
-        // de ex: myFunction("Wantsome", 2) sa printeze "WantsomeWantsome" 
+                //  2. Scrieti o functie care sa faca uppercase la fiecare litera de la fiecare inceput de string
+                // de ex: myFunction("i am superman") sa printeze "I Am Superman" 
 
-// --------------------------------------------------------------------------------------------------------------------------------------  
+                // declaram o functie care accepta un string ca si parametru
+                // impartim string-ul intr-un array (strToArray) cu fiecare cuvant din propozitie
+                // ["i", "am", "superman"] => ["I", "Am", "Superman"]
+                // declaram o variabila result ca si string gol
+                // parcurgem strToArray   
+                // strToArray[i] o sa fie pe rand: "i" apoi "am" apoi "superman"
+                // result = result.concat(strToArray[i].slice(0,1).toUpperCase().concat(strToArray[i].slice(1)))
+                // result = result.concat(" ");
 
-        //  5. A palindrome is a word or a phrase that is the same whether you read it backward or forwards, for example, the word
-        // 'level'. Scrieti o functie care verifica daca un string este palindrom; Implementati mai multe variante 
+                // myFunction("i am superman") //sa printeze "I Am Superman"
 
-// --------------------------------------------------------------------------------------------------------------------------------------  
+                function capitalizeFunction(str) {
+                        var words = []
+                        for (let word of str.split(' ')) {
+                                words.push(word[0].toUpperCase() + word.slice(1))
+                        }
+                        return words.join(' ')
+                }
 
-        //  6. Implementati o functie care accepta ca argument un array compus din mai multe array-uri de valori numerice si
-        // returneaza un array care contine ca si elemente cele mai mari numere din fiecare array 
+                console.log(capitalizeFunction("i am superman"));
 
-        // var myInputArray = [[1, 2, 3], [8, 9, 5], [52, 42, 21, -7, 3]];
-        // [3, 9, 52]
-        // finalArray = [];
+                // --------------------------------------------------------------------------------------------------------------------------------------  
 
-        // declaram finalArray
-        // parcurgem myInputArray
-        // declaram o variabila X care contine array - urile din array -> myInputArray[i]
-        // declaram o variabila max undefined
-        // parcurgem array - ul X pentru a vedea maximul
-        // daca max < X[i] atunci max = X[i]
-        // punem max in finalArray // search google: how to add a new element into an array
-        // logam finalArray
+                //  3. Scrieti o functie care sa schimbe literele unui string daca sunt uppercase cu lowercase si invers
+                // ex: myFunction("xxXyYzZZ") sa printeze "XXxYyZzz" 
 
-// --------------------------------------------------------------------------------------------------------------------------------------  
 
-        // 7. Implementati o functie care face reverse la un string
 
-// --------------------------------------------------------------------------------------------------------------------------------------  
 
-        // 8. Implementati o functie care calculeaza factorialul unui numar
+                // --------------------------------------------------------------------------------------------------------------------------------------  
 
-        // factorial(3) // 6 -> 1 * 2 *3
-        // n! = 1 * 2 * 3 * 4 * .......... * n-1 * n   
-        // declaram o variabila nr
-        // creem o functie factorial
-        // declaram variabila result
-        // facem un for de la i = nr; i>=1; i--
-        // result = result * i
-        // returnam result
-        // apelam functia factorial cu variabila nr
-        // hint: google search: js recursive function
+                //  4. Scrieti o functie care sa concateneze un string de cate ori ii zicem
+                // de ex: myFunction("Wantsome", 2) sa printeze "WantsomeWantsome" 
 
-// --------------------------------------------------------------------------------------------------------------------------------------        
+                // --------------------------------------------------------------------------------------------------------------------------------------  
 
-        // 9. Implementati o functie care accepta ca argumente doua string - uri si verifica daca primul se termina cu cel din urma
+                //  5. A palindrome is a word or a phrase that is the same whether you read it backward or forwards, for example, the word
+                // 'level'. Scrieti o functie care verifica daca un string este palindrom; Implementati mai multe variante 
 
-// --------------------------------------------------------------------------------------------------------------------------------------  
+                // --------------------------------------------------------------------------------------------------------------------------------------  
 
-        // 10. Implementati o functie care accepta doua argumente: un array si o functie de adevar.Functia returneaza primul
-        // element din array care trece testul specificat
+                //  6. Implementati o functie care accepta ca argument un array compus din mai multe array-uri de valori numerice si
+                // returneaza un array care contine ca si elemente cele mai mari numere din fiecare array 
 
-// --------------------------------------------------------------------------------------------------------------------------------------  
+                // var myInputArray = [[1, 2, 3], [8, 9, 5], [52, 42, 21, -7, 3]];
+                // [3, 9, 52]
+                // finalArray = [];
 
-        // 11. Implementati o functie care accepta ca argumente doua string - uri si verifica daca primul string contine toate literele
-        // celui de - al doilea string
+                // declaram finalArray
+                // parcurgem myInputArray
+                // declaram o variabila X care contine array - urile din array -> myInputArray[i]
+                // declaram o variabila max undefined
+                // parcurgem array - ul X pentru a vedea maximul
+                // daca max < X[i] atunci max = X[i]
+                // punem max in finalArray // search google: how to add a new element into an array
+                // logam finalArray
 
-// --------------------------------------------------------------------------------------------------------------------------------------  
+                // --------------------------------------------------------------------------------------------------------------------------------------  
 
-        // 12. Implementati o functie care accepta ca argumente doi parametri: un array si o valoare.Functia afiseaza fiecare
-        // element al array - ului pana cand intalneste elementul cu valoarea specificata
+                // 7. Implementati o functie care face reverse la un string
 
-// --------------------------------------------------------------------------------------------------------------------------------------          
+                function reverseString(string) {
+                        // Step 1. Use the split() method to return a new array
+                        var splitString = string.split(""); // var splitString = "hello".split("");
+                        // ["h", "e", "l", "l", "o"]
 
-        // 13. Scrieti o functie care elimina toate valorile false dintr - un array: false, null, 0, "", undefined, NaN
+                        // Step 2. Use the reverse() method to reverse the new created array
+                        var reverseArray = splitString.reverse(); // var reverseArray = ["h", "e", "l", "l", "o"].reverse();
+                        // ["o", "l", "l", "e", "h"]
 
-// --------------------------------------------------------------------------------------------------------------------------------------  
+                        // Step 3. Use the join() method to join all elements of the array into a string
+                        var joinArray = reverseArray.join(""); // var joinArray = ["o", "l", "l", "e", "h"].join("");
+                        // "olleh"
 
-        // 14. Scrieti o functie care repeta un string de n ori specificate
+                        //Step 4. Return the reversed string
+                        console.log(joinArray); // "olleh"
+                }
 
-    </script>
+                reverseString("Have a nice day");
+
+                // --------------------------------------------------------------------------------------------------------------------------------------  
+
+                // 8. Implementati o functie care calculeaza factorialul unui numar
+
+                // factorial(3) // 6 -> 1 * 2 *3
+                // n! = 1 * 2 * 3 * 4 * .......... * n-1 * n   
+                // declaram o variabila nr
+                // creem o functie factorial
+                // declaram variabila result
+                // facem un for de la i = nr; i>=1; i--
+                // result = result * i
+                // returnam result
+                // apelam functia factorial cu variabila nr
+                // hint: google search: js recursive function
+
+
+                function factorializeNumber(number) {
+                        if (number < 0)
+                                return -1;
+                        else if (number == 0)
+                                return 1;
+                        else {
+                                return (number * factorializeNumber(number - 1));
+                        }
+                }
+                console.log(factorializeNumber(3));
+
+                // --------------------------------------------------------------------------------------------------------------------------------------        
+
+                // 9. Implementati o functie care accepta ca argumente doua string - uri si verifica daca primul se termina cu cel din urma
+
+                // --------------------------------------------------------------------------------------------------------------------------------------  
+
+                // 10. Implementati o functie care accepta doua argumente: un array si o functie de adevar.Functia returneaza primul
+                // element din array care trece testul specificat
+
+                // myFunction([1,2,3,4], testFunction) // output: 2
+
+                // function testFunction(nr) {
+                // return nr%2 === 0;
+                // }
+
+                // --------------------------------------------------------------------------------------------------------------------------------------  
+
+                // 11. Implementati o functie care accepta ca argumente doua string - uri si verifica daca primul string contine toate literele
+                // celui de - al doilea string
+
+                // Varianta 1
+                // declaram o functie care primeste 2 argumente str1 si str2
+                // declaram variabila str2ToArray care va fi un array cu toate caracterele din str2
+                // str1 = "gartbpoc"
+                // str2ToArray = ["a", "b", "c"]
+                // parcurgem str2ToArray
+                // daca str2ToArray[i] nu se afla in str1 
+                // return false
+                // return true
+
+                // Varianta 2
+                // declaram o functie care primeste 2 argumente str1 si str2
+                // declaram variabila str2ToArray care va fi un array cu toate caracterele din str2
+                // str1 = "gartbpoc"
+                // str2ToArray = ["a", "b", "c"]
+                // parcurgem str2ToArray
+                // daca str2ToArray[i] se afla in str1 
+                // continue;
+                // return false
+                // return true   
+
+                // testEx11("gartbpoc", "abc") // true
+                // testEx11("gartbpoc", "5t4") // false
+
+                // --------------------------------------------------------------------------------------------------------------------------------------  
+
+                // 12. Implementati o functie care accepta ca argumente doi parametri: un array si o valoare.Functia afiseaza fiecare
+                // element al array - ului pana cand intalneste elementul cu valoarea specificata
+
+                // myFunction([1,2,3,4], 3) // output: 1
+                // output: 2
+
+                // --------------------------------------------------------------------------------------------------------------------------------------          
+
+                // 13. Scrieti o functie care elimina toate valorile false dintr - un array: false, null, 0, "", undefined, NaN
+
+                // --------------------------------------------------------------------------------------------------------------------------------------  
+
+                // 14. Scrieti o functie care repeta un string de n ori specificate
+
+                function repeatString(string, n) {
+                        var repeatedString = "";
+                        while (n > 0) {
+                                repeatedString += string;
+                                n--;
+                        }
+                        return repeatedString;
+                }
+                console.log(repeatString("Have a nice day ", 5));
+
+        </script>
 
 </head>
 
 <body>
-    <h1>HomeworkW7 - Partea 1</h1>
+        <h1>HomeworkW7 - Partea 2</h1>
 </body>
 
 </html>

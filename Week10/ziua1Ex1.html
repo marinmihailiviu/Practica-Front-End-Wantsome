@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Week 10 - Ziua 1</title>
+    <meta charset="UTF-8">
+
+    <script>
+        function displayTime () {
+            document.getElementById('timeDisplay').innerHTML = (new Date()).getHours() + ':' + (new Date()).getMinutes
+        }
+    </script>
+
+</head>
+
+<body>
+    <h1>Week 10 - Ziua 1</h1>
+    <p id="timeDisplay"></p>
+    <button onclick = "displayTime()">Get Time</button>
+</body>
+
+</html>

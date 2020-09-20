@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Week 9 - Ziua 2 - DOM change</title>
+    <meta charset="UTF-8">
+
+</head>
+
+<body>
+
+    <p>This is element.</p>
+
+    <ul>
+        <li>Banane</li>
+        <li>Struguri</li>
+
+    </ul>
+
+
+    <script>
+
+        const paragraph = document.createElement('p');
+        console.log(paragraph);
+        paragraph.textContent = 'Hello from the other side!';
+        paragraph.innerHTML = 'Hello from <strong>the other side!</strong>'
+
+        const list = document.querySelector('ul');
+        const newListItem = document.createElement('li');
+        newListItem.textContent = 'Portocale';
+        
+        console.log(newListItem);
+
+        list.appendChild(newListItem);
+
+        const listItem2 = document.createElement('li');
+        listItem2.textContent = 'Mere';
+
+        list.insertBefore(listItem2, list.firstElementChild.nextElementSibling);
+        // list.insertBefore(listItem2, list.children[2]); - adauga pe pozitia 2
+
+        // modify list time 
+        const modifiedItem = document.createElement('li');
+        modifiedItem.textContent = 'Un alt fruct';
+
+        list.replaceChild(modifiedItem, list.children[0]);
+
+        // remove child
+        list.removeChild(list.lastChild);
+
+
+    </script>
+
+
+
+
+
+
+
+</body>
+
+</html>

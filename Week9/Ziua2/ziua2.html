@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Week 9 - Ziua 2 - DOM</title>
+    <meta charset="UTF-8">
+
+</head>
+
+<body>
+    <h1>DOM</h1>
+    <button type="button" onclick="changeBg()">Change background</button>
+
+    <h1 id='my-title'>This is my title</h1>
+    <button type="button" onclick="changeTitleColor()">Change Title color</button>
+
+
+    <p class='my-text'>Text 1</p>
+    <p class='my-text'>Text 2</p>
+    <p class='my-text'>Text 3</p>
+    <button type="button" onclick="changeTextsBg()">Change text background</button>
+
+    <h2 id='today-status'>Today is Saturday</h2>
+    <button type="button" onclick="useQuerySelector()">Use Query</button>
+
+    <br>
+
+    <p class='new-text'>Monday</p>
+    <p class='new-text'>Tuesday</p>
+    <p class='new-text'>Wednesday</p>
+    <button type="button" onclick="useQueryAll()">Use Query All</button>
+
+    <br>
+
+    <section>This is my section1.</section>
+    <section>This is my section2.</section>
+    <section>This is my section3.</section>
+    <section>This is my section4.</section>
+    <article>This is my article1.</article>
+    <article>This is my article2.</article>
+    <article>This is my article3.</article>
+    <article>This is my article4.</article>
+    <button type="button" onclick="useQueryAllByTags()">Use Query All Tags</button>
+
+
+
+    <script>
+
+        const changeBg = () => {
+            document.body.style.backgroundColor = 'green';
+        }
+
+        const changeTitleColor = () => {
+            const h1 = document.getElementById('my-title');
+            h1.style.color = 'white';
+            h1.style.backgroundColor = 'red';
+            console.log(h1);
+            h1.innerText = 'Title has just changed';
+
+        }
+
+        const changeTextsBg = () => {
+            const texts = document.getElementsByClassName('my-text');
+            console.log(texts);
+            texts[0].style.backgroundColor = 'pink';
+            texts[1].style.backgroundColor = 'red';
+            texts[2].style.backgroundColor = 'yellow';
+
+            for (let i = 0; i < texts.length; i++) {
+                texts[i].style.backgroundColor = 'red';
+                console.log(texts[i].innerText);
+            }
+
+        }
+
+        const useQuerySelector = () => {
+            const element = document.querySelector('#today-status');
+            element.style.backgroundColor = '#ffc20e';
+        }
+
+        const useQueryAll = () => {
+            const elements = document.querySelectorAll('.new-text');
+            for (let i = 0; i < elements.length; i++) {
+                elements[i].style.color = 'blue';
+                elements[i].innerText = 'Text changed on click.'
+            }
+
+        }
+
+        const useQueryAllByTags = () => {
+            const elements = document.querySelectorAll('section, article');
+            for (let i = 0; i < elements.length; i++) {
+                elements[i].style.color = '#ff0066';
+                // elements[i].innerText = 'Text changed on click.'
+            }
+
+            // modifica primul element din section cu o noua culoare
+            const elems = document.getElementsByTagName('section');
+            // setTimeout(() => elems[0].style.color = 'lime', 500)
+            elems[0].style.color = 'lime';
+        }
+
+
+
+    </script>
+
+
+</body>
+
+</html>

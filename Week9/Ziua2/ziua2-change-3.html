@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Week 9 - Ziua 2 - DOM change by classes</title>
+    <meta charset="UTF-8">
+<style>
+    
+</style>
+
+</head>
+
+<body>
+
+    <div
+    style = "
+    height: 200px;
+    width: 200px;
+    border: 5px solid gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;"
+    > 
+    Style me!
+    </div>
+    
+
+    <script>
+
+        const div = document.querySelector('div');
+        div.style.borderRadius = '50%';
+        div.style.backgroundColor= 'lime';
+        div.style.fontSize = '22px';
+        div.style.fontWeight = 'bold';
+    </script>
+
+</body>
+
+</html>

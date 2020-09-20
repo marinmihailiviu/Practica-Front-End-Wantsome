@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Week 9 - Ziua 2 - DOM change by attribute</title>
+    <meta charset="UTF-8">
+
+</head>
+
+<body>
+
+    <h2 style = 'color: red'>This is the new car.</h2>
+
+    <img alt = "Car" src = "https://www.midocar.ro/passat/images/s1_passat_01.jpg" width = "800px" height = "auto"/>
+
+
+
+
+    <script>
+
+        const image = document.querySelector('img');
+        console.log(image.hasAttribute('alt')); // daca are sau nu atribute - returneaza true sau false
+        console.log(image.getAttribute('src'));
+        // console.log(image.removeAttribute('alt'));
+
+        setTimeout (() => image.setAttribute('src', 'https://automotorsisport.ro/wp-content/uploads/2019/02/vw-passat-facelift-2019.jpg'), 1000);
+        
+        const text = document.querySelector('h2');
+        text.setAttribute('style', 'color: yellow');
+        text.setAttribute('style', 'font-size: 40px');
+
+    </script>
+
+
+
+
+
+
+
+</body>
+
+</html>
